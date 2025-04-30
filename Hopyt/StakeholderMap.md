@@ -4,9 +4,12 @@ This diagram shows the main stakeholders, user roles, system entities, and exter
 
 ```mermaid
 %%{init: {'theme': 'dark'}}%%
-%% Changed graph direction to LR (Left to Right) for better horizontal flow
+%% Graph direction LR (Left to Right) for horizontal flow
 graph LR
-    %% Define groups (subgraphs) for clarity
+    %% Define groups (subgraphs) for clarity.
+    %% Note: Direct pixel sizing/precise alignment/font size control is limited in standard Mermaid.
+    %% Layout is primarily automatic based on content and graph direction.
+
     subgraph "Users & Roles"
         direction TB %% Arrange users Top-to-Bottom within their box
         R["Rider"]
@@ -51,7 +54,7 @@ graph LR
     H -- Calculates Tolls via --> TG
     H -- Processes Payments via --> ST
     %% Moved comment to its own line for compatibility
-    %% Firebase Hosting is part of Firebase Platform
+    %% Firebase Hosting is part of the Firebase Platform
     H -- Hosted/Served via --> FB
     H -- DNS/Caching via --> CF
     H -- Distributed via --> AS
@@ -61,7 +64,7 @@ graph LR
     D -- Downloads/Updates App via --> AS
 
     %% Style nodes (optional, but can enhance readability)
-    %% Specific styling overrides the theme. Using green background and white text for Core System.
+    %% Specific styling overrides the theme. Using a green background and white text for the Core System.
     style H fill:#28a745,stroke:#ccc,stroke-width:2px,color:#ffffff
     %% General styling for user and service nodes for dark theme contrast
     classDef user fill:#334,stroke:#aaa,stroke-width:1px,color:#eee;
